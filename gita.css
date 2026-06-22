@@ -25,6 +25,7 @@ article.verse{background:var(--card);border:1px solid var(--line);border-radius:
 .iast{font-family:var(--sans);font-style:italic;color:var(--muted);text-align:center;font-size:1rem;line-height:1.9;margin-bottom:.4rem}
 h3.sec{font-family:var(--sans);font-size:.92rem;letter-spacing:.05em;color:var(--accent2);border-left:4px solid var(--accent2);padding-left:.6rem;margin:1.4rem 0 .6rem}
 .gloss{font-size:1.05rem;font-weight:600;color:#3a342b;background:#f3ecdd;border-radius:8px;padding:.6rem .85rem;margin:.5rem 0}
+.gloss .name{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.2em;text-decoration-color:var(--accent)}
 ul.words{list-style:none;padding:0;margin:.4rem 0;font-size:.95rem}
 ul.words li{padding:.22rem 0;border-bottom:1px dashed var(--line)}
 ul.words li:last-child{border-bottom:none}
