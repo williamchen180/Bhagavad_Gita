@@ -1,3 +1,20 @@
+// 版本檢查：若伺服器上的 site-version 比目前載入的新，強制重新載入以避開瀏覽器快取
+(function(){
+  var meta = document.querySelector('meta[name="site-version"]');
+  if(!meta || !window.fetch) return;
+  var loaded = meta.getAttribute('content');
+  if(!loaded) return;
+  fetch(location.pathname + '?_=' + Date.now(), {cache:'no-store'})
+    .then(function(r){ return r.ok ? r.text() : ''; })
+    .then(function(html){
+      var m = html.match(/name="site-version"\s+content="([^"]+)"/);
+      if(m && m[1] && m[1] !== loaded && location.href.indexOf('v=' + m[1]) === -1){
+        location.replace(location.pathname + '?v=' + encodeURIComponent(m[1]));
+      }
+    })
+    .catch(function(){});
+})();
+
 (function(){
   // 為每個逐詞對照清單加上可點擊的展開／收合控制
   var lists = document.querySelectorAll('ul.words');
