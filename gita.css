@@ -28,6 +28,9 @@ h3.sec{font-family:var(--sans);font-size:.92rem;letter-spacing:.05em;color:var(-
 .gloss .name{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.2em;text-decoration-color:var(--accent)}
 .gloss .name-k{color:#2c6593;text-decoration-color:#2c6593}
 .gloss .name-a{color:#2c724a;text-decoration-color:#2c724a}
+/* 整節意譯背景依說話者區分：奎師那（藍）／阿周那（綠）／其餘旁白（預設米色） */
+.gloss.gloss-k{background:#e3edf5}
+.gloss.gloss-a{background:#e4f0e8}
 ul.words{list-style:none;padding:0;margin:.4rem 0;font-size:.95rem}
 ul.words li{padding:.22rem 0;border-bottom:1px dashed var(--line)}
 ul.words li:last-child{border-bottom:none}
